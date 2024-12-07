@@ -64,10 +64,10 @@ st.write("Using this graph we can easily find out the most and the least popular
 # 2 Chart
 # This pie chart shows us the ratio of major and minor songs
 st.subheader("The ratio of major and minor songs")
-mode_all = dt["Mode"].value_counts()
+mode_all = dt["Mode"].replace({1: "Major", 0: "Minor"}).value_counts()
 fig2 = px.pie(
     values=mode_all.values,
-    names=["Major", "Minor"],
+    names=mode_all.index
 )
 st.plotly_chart(fig2)
 st.write("From this diogram we can easily mention that The Beatles prefer major to minor mode.")

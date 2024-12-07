@@ -3,7 +3,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-file = ".venv/The Beatles songs dataset 285x45 v0.csv"
+file = "The Beatles songs dataset 285x45 v0.csv"
 dt = pd.read_csv(file)
 
 #Usless columns
